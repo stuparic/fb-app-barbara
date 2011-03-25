@@ -1,0 +1,42 @@
+﻿body
+{
+	background-image:url(backgrad.png);
+background-repeat:repeat-y;
+}
+#Podvrste
+{
+	width: 160px; 
+	height: 140px;
+}
+#Velicina
+{
+	width: 75px;
+}
+#Sosevi
+{
+	width:75;
+}
+#PorudzbaHolder
+{
+	
+}
+#Cena
+{
+	font-family:ariel;
+	font-size: 40px;
+	text-align: center;
+	height:50px;
+	line-height:45px;
+	width: 100px;
+	height: 50px;
+}
+#UkupnaCena
+{
+	font-family:ariel;
+	font-size: 40px;
+	text-align: center;
+	height:50px;
+	line-height:45px;
+	width: 100px;
+	height: 50px;
+}
