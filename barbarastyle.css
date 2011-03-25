@@ -1,42 +1,25 @@
-﻿body
-{
-	background-image:url(backgrad.png);
-background-repeat:repeat-y;
+﻿@import url(http://reset5.googlecode.com/hg/reset.min.css);
+/* Main css file */
+body{
+	font: normal 12px "Bookman Old Style", Arial;
 }
-#Podvrste
-{
-	width: 160px; 
-	height: 140px;
+
+h3{
+	margin-bottom: 15px;
+	font-weight: bold;
 }
-#Velicina
-{
-	width: 75px;
+
+.container{
+	width: 520px;
+	margin: 0 auto;
 }
-#Sosevi
-{
-	width:75;
+
+.vrste-jela{
 }
-#PorudzbaHolder
-{
-	
+
+.izbor-premaza ul li{
+	float: left;
+	padding: 0 10px;
+	list-style: none;
 }
-#Cena
-{
-	font-family:ariel;
-	font-size: 40px;
-	text-align: center;
-	height:50px;
-	line-height:45px;
-	width: 100px;
-	height: 50px;
-}
-#UkupnaCena
-{
-	font-family:ariel;
-	font-size: 40px;
-	text-align: center;
-	height:50px;
-	line-height:45px;
-	width: 100px;
-	height: 50px;
-}
+
