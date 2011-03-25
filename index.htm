@@ -102,17 +102,12 @@ window.fbAsyncInit = function() {
             }
 			document.frmMain.Ime.value = 
 </script>
-<script language="Javascript" src="barbara.js">
-
-</script>
-
-
-
+<script src="barbara.js" type="text/javascript"></script>
 <form name="frmMain" method="get" action="script.php" onSubmit="return validate(this); reset_form();" >
-
-<table>
-    <td>
-		<select id="Vrste" name="Vrste" onChange="PopulatePodvrste(); enableCheckboxes(); disableDodajButton();" size="8" >
+<div class="container">
+	<div class="vrste-jela">
+    	<h3>Izaberite jelo</h3>
+    	<select id="Vrste" name="Vrste" onChange="PopulatePodvrste(); enableCheckboxes(); disableDodajButton();" size="8" >
 			<option value="Pica">Pica</option>
 			<option value="Barbarina domaca trpeza">Barbarina domaca trpeza</option>
 			<option value="Slana Palacinka">Slana Palacinka</option>
@@ -122,76 +117,72 @@ window.fbAsyncInit = function() {
 			<option value="Chicken Meni">Chicken Meni</option>
 			<option value="Posebna Ponuda">Posebna Ponuda</option>
 			<option value="Salate">Salate</option>
-		</select>&nbsp
-	</td>
-
-	<td>
-		<select id="Podvrste" name="Podvrste" onChange="PopulateVelicine();" size="8">
+		</select>
+    </div>
+    <div class="podvrste-jela">
+    	<select id="Podvrste" name="Podvrste" onChange="PopulateVelicine();" size="8">
 			<option>                </option>
-		</select>&nbsp&nbsp
-	
-	</td>
-	<td>
-		<select id="Velicina" name="Velicina"  onChange="PopulateCena();" size="4">
+		</select>
+    </div>
+    <div class="velicine-jela">
+    	<select id="Velicina" name="Velicina"  onChange="PopulateCena();" size="4">
 			<option>                </option>
-		</select>&nbsp&nbsp
-		<br>
-		<select id="Sosevi" name="Sosevi" multiple size="4">
+		</select>
+    </div>
+    <div class="sosevi">
+    	<select id="Sosevi" name="Sosevi" multiple size="4">
 			<option>                </option>
-		</select>&nbsp&nbsp
-	</td>
-	<td>	
-		<input type="checkbox" name="checkgroup" >Pavlaka</input><br>
+		</select>
+    </div>
+    <div class="izbor-premaza">
+    	<input type="checkbox" name="checkgroup" >Pavlaka</input><br>
 		<input type="checkbox" name="checkgroup" >Majonez</input><br>
 		<input type="checkbox" name="checkgroup" >Ke&#269;ap</input><br>
 		<input type="checkbox" name="checkgroup" >Urnebes</input><br>
 		<input type="checkbox" name="checkgroup" >Paradajz</input><br>
 		<input type="checkbox" name="checkgroup" >Zelena</input><br>
 		<input type="checkbox" name="checkgroup" >Luk</input>
-	</td>
-</table>
-<table>
-	<td>
-		<textarea id="PorudzbaHolder" name="PorudzbaHolder" readonly="readonly" rows="8" cols="40"> </textarea>
-	</td>
-	<td>
-		<br>
-			<input type="button" value="Dodaj" name="Dodaj" onClick="inc();"/><br><br>
-		
-			<input type="button" value="Ponisti" name="Ponisti" onClick="reset_narudzba();"/><br><br>
-	
-			<input type="button" value="Zavrsi" onClick="zavrsi_narudzbu();"/><br><br>
-		
-	</td>
-	&nbsp
-	<td>
-		Trenutna Cena:<br/>
+    </div>
+    <div class="porudzbina">
+    	<h3>Vasa korpa</h3>
+        <textarea id="PorudzbaHolder" name="PorudzbaHolder" readonly="readonly" rows="8" cols="40"> </textarea>
+        <input type="button" value="Dodaj" name="Dodaj" onClick="inc();"/><br><br>
+		<input type="button" value="Ponisti" name="Ponisti" onClick="reset_narudzba();"/><br><br>
+		<input type="button" value="Zavrsi" onClick="zavrsi_narudzbu();"/><br><br>
+    </div>
+    <div class="status">
+    	<h3>Trenutna Cena:</h3>
 		<textarea  id="Cena" rows="2" cols="5" name="Cena" readonly="readonly" ></textarea><br/>
-		Ukupna Cena:<br/>
+		<h3>Ukupna Cena:</h3>
 		<textarea id="UkupnaCena" rows="2" cols="5" name="UkupnaCena" readonly="readonly" ></textarea>
-	</td>
-
-</table>
-
-<table>
-<tr>
-<td>
-Vase Ime i Prezime:<input type="text" name="Ime"  size="45"/><br/>
-Vas kontakt telefon:<input type="text" name="Telefon" size="45"/><br/>
-Vas email:<input type="text" name="Email" size="55"/><br/>
-</td>
-</tr>
-<tr>
-<td>
-Adresa:<br/><textarea rows="2" cols="50" name="Adresa"></textarea><br/>
-Napomena:<br/><textarea rows="3" cols="50" name="Napomena"></textarea>
-<p><fb:login-button autologoutlink="true" perms="email,user_birthday,status_update,publish_stream"></fb:login-button></p>
-</td>
-
-</tr>
-</table>
-<br/>
-<input type="submit" name="Naruci" value="Naruci"/>
+    </div>
+    <div class="korisnik">
+    	<ul>
+        	<li>
+            	<label>Ime i Prezime:</label>
+                <input type="text" name="Ime"  size="45"/>
+            </li>
+            <li>
+            	<label>Kontakt telefon:</label>
+                <input type="text" name="Telefon" size="45"/>
+            </li>
+			<li>
+            	<label>Email:</label>
+                <input type="text" name="Email" size="55"/>
+            </li>
+            <li>
+            	<label>Adresa:</label>
+                <textarea rows="2" cols="50" name="Adresa"></textarea>
+            </li>
+            <li>
+            	<label>Napomena:</label>
+                <textarea rows="3" cols="50" name="Napomena"></textarea>
+            </li>
+		</ul>
+		<p><fb:login-button autologoutlink="true" perms="email,user_birthday,status_update,publish_stream"></fb:login-button></p>
+    </div>
+    <div class="submit">
+    	<input type="submit" name="Naruci" value="Naruci"/>
+    </div>
+</div>
 </form>
-</body>
-</html>
