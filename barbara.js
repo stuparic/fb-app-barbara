@@ -1,11 +1,35 @@
-﻿onload = function () {
-for (j = 0; j < document.frmMain.checkgroup.length; j++){
-        document.frmMain.checkgroup[j].disabled = true ;
-        }
-    	document.frmMain.Naruci.disabled = true;
-		disableDodajButton();
-}
+onload = function () {
 
+	var now = new Date();
+	var eleven = new Date();
+	var seven = new Date();
+	eleven.setHours(22,45,0);
+	seven.setHours(7,15,0);  
+	for (j = 0; j < document.frmMain.checkgroup.length; j++){
+			document.frmMain.checkgroup[j].disabled = true ;
+			}
+			document.frmMain.Naruci.disabled = true;
+			disableDodajButton();
+	 if ((now > eleven)||(now < seven)){
+		 document.frmMain.Naruci.disabled = true;
+		 alert('Nažalost restoran ne radi, radno vreme je od 7 do 23.');
+	 }else{	
+		 alert('Restoran radi, prijatno.');
+	 }
+}
+// function disableEntireForm() {
+    // var limit = document.frmMain.elements.length;
+    // for (i=0;i<limit;i++) {
+      // document.frmMain.elements[i].disabled = true;
+    // }
+// }
+
+// function enableEntireForm() {
+    // var limit = document.frmMain.elements.length;
+    // for (i=0;i<limit;i++) {
+      // document.frmMain.elements[i].disabled = false;
+    // }
+// }
 
 var i = 0;
 var porudzba = "";
